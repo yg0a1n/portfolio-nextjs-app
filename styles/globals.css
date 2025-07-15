@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Geist Mono', 'monospace', sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair), serif !important;
+}
+
+/* Your default theme */
+:root {
+  /* Base background */
+  --background: #ffffff;
+  --foreground: #14121f;
+
+  /* Muted/subtle backgrounds */
+  --muted: #f4f4f6;
+  --muted-foreground: #33255b;
+
+  /* Card / UI elements */
+  --card: #fdfcfe;
+  --card-foreground: #291f43;
+
+  --popover: #ffffff;
+  --popover-foreground: #291f43;
+
+  /* Border / separators */
+  --border: #d6d6e0;
+  --input: #d6d6e0;
+
+  /* Focus ring */
+  --ring: #6e56cf;
+
+  /* Hovered & active UI */
+  --hovered: #f0f0fa;
+  --active: #e6e6f6;
+
+  /* Hovered borders */
+  --hover-border: #7d66d9;
+
+  /* Primary (main CTA or solid button) */
+  --primary: #6e56cf;
+  --primary-foreground: #ffffff;
+
+  --primary-hover: #7d66d9;
+
+  /* Secondary buttons or accents */
+  --secondary: #f4f4f6;
+  --secondary-foreground: #33255b;
+
+  /* Accent color (less frequent emphasis) */
+  --accent: #d0c6f6;
+  --accent-foreground: #291f43;
+
+  /* Destructive (if needed) */
+  --destructive: #ba1a1a;
+  --destructive-foreground: #ffffff;
+
+  /* Texts */
+  --low-contrast-text: #56468b;
+  --high-contrast-text: #291f43;
+}
+
+.dark {
+  --background: #14121f;
+  --foreground: #e2ddfe;
+
+  --muted: #1b1525;
+  --muted-foreground: #baa7ff;
+
+  --card: #291f43;
+  --card-foreground: #e2ddfe;
+
+  --popover: #291f43;
+  --popover-foreground: #e2ddfe;
+
+  --border: #56468b;
+  --input: #56468b;
+  --ring: #56468b;
+
+  --hovered: #33255b;
+  --active: #3c2e69;
+
+  --hover-border: #6958ad;
+
+  --primary: #6e56cf;
+  --primary-foreground: #e2ddfe;
+  --primary-hover: #7d66d9;
+
+  --secondary: #1b1525;
+  --secondary-foreground: #baa7ff;
+
+  --accent: #6958ad;
+  --accent-foreground: #e2ddfe;
+
+  --destructive: #ba1a1a;
+  --destructive-foreground: #ffffff;
+
+  --low-contrast-text: #baa7ff;
+  --high-contrast-text: #e2ddfe;
+}
+
+.gradient-01 {
+  background-image: linear-gradient(
+    270deg,
+    hsl(295deg 76% 51%) 0%,
+    hsl(284deg 70% 73%) 26%,
+    hsl(257deg 70% 86%) 39%,
+    hsl(202deg 92% 90%) 50%,
+    hsl(215deg 77% 81%) 61%,
+    hsl(221deg 73% 70%) 74%,
+    hsl(220deg 76% 51%) 100%
+  );
+  filter: blur(125px);
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    97.86deg,
+    #a509ff 0%,
+    #34acc7 53.65%,
+    #a134c7 100%
+  );
+}
+
+.gradient-02 {
+  position: absolute;
+  width: 200px;
+  height: 438px;
+  top: 0px;
+  right: 0px;
+
+  background: #7aebfb;
+  filter: blur(190px);
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.gradient-03 {
+  position: absolute;
+  width: 404px;
+  height: 800px;
+  left: 20%;
+  top: 5%;
+
+  background: rgba(149, 66, 232, 0.35);
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
+}
+
+.gradient-04 {
+  position: absolute;
+  width: 304px;
+  height: 100vh;
+  left: 30%;
+  top: 10%;
+
+  background: rgba(45, 72, 152, 0.75);
+  filter: blur(200px);
+  transform: rotate(-53.13deg);
+}
+
+.gradient-05 {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.feedback-gradient {
+  position: absolute;
+  width: 200px;
+  height: 316px;
+  left: 0px;
+  top: 0px;
+
+  background: #8d39a3;
+  filter: blur(175px);
+}
+
+.footer-gradient {
+  position: absolute;
+  width: 500px;
+  height: 100px;
+  left: 37%;
+  bottom: 0;
+
+  background: #65c4fa;
+  filter: blur(150px);
+}
