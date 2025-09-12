@@ -2,7 +2,6 @@
 
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion'
-import { useQRCode } from 'next-qrcode'
 
 import TypingText from '@/components/typing-text'
 import { getStartedContent, startingFeatures } from '@/constants'
@@ -10,9 +9,7 @@ import { getStartedContent, startingFeatures } from '@/constants'
 import { fadeIn, staggerContainer } from '@/utils/motion'
 
 export default function Hero({ lang }: { lang: string }) {
-  const { Canvas } = useQRCode()
-
-  const { typingText, title, linkText } =
+  const { typingText, linkText } =
     lang === 'en' ? getStartedContent.en : getStartedContent.fr
 
   const startingFeaturesTranslate =
@@ -30,8 +27,8 @@ export default function Hero({ lang }: { lang: string }) {
         <div className="flex-[0.35] flex justify-center items-center">
           <motion.img
             variants={fadeIn('right', 'tween', 0.3, 1)}
-            src="/img/photo-linkedIn.jpeg"
-            alt="Yannick goalen identity photo"
+            src="/img/photo-linkedin.jpeg"
+            alt="Yannick goalen photo"
             className="object-cover w-40 h-40 rounded-full"
           />
         </div>
