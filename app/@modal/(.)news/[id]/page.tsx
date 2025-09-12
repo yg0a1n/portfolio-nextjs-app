@@ -14,7 +14,7 @@ const NewTasksModalPage = ({ params }: { params: { id: string } }) => {
 
   return (
     <Modal>
-      <div className="flex items-center justify-center w-full h-full">
+      <div className="flex justify-center items-center w-full h-full">
         <Image
           src={`/img/${imgFile}`}
           alt="project tasks image"

@@ -1,5 +1,5 @@
-import { notFound } from 'next/navigation'
 import Image from 'next/image'
+import { notFound } from 'next/navigation'
 
 import { newFeatureCards } from '@/constants'
 
@@ -20,7 +20,7 @@ const NewsPage = ({ params }: { params: { id: string } }) => {
   const { imgFile } = newFeatureCardsTranslated[parseInt(id)] || {}
 
   return (
-    <div className="flex items-center justify-center w-full h-screen">
+    <div className="flex justify-center items-center w-full h-screen">
       <Image
         src={`/img/${imgFile}`}
         alt="project tasks image"

@@ -6,7 +6,13 @@ import { useTheme } from 'next-themes'
 
 import PersonalProjects from '@/components/personal-projects'
 import Web3Projects from '@/components/web3-projects'
-import { myPortfolioItems, myPortfolioItemsWeb3, myPortfolioItemsWebsite, portfolioItemsWeb3Cards, web3ProExperiences } from '@/constants'
+import {
+  myPortfolioItems,
+  myPortfolioItemsWeb3,
+  myPortfolioItemsWebsite,
+  web3ProCards,
+  web3ProExperiences,
+} from '@/constants'
 
 export default function Experience({ lang }: { lang: string }) {
   const [mounted, setMounted] = useState(false)
@@ -26,13 +32,17 @@ export default function Experience({ lang }: { lang: string }) {
 
   const { typingText: typingTextWeb3, title: titleWeb3 } =
     lang === 'en' ? myPortfolioItemsWeb3.en : myPortfolioItemsWeb3.fr
-  const web3ProCompany = lang === 'en' ? web3ProExperiences.en : web3ProExperiences.fr
-  const web3ProProjectCards = lang === 'en' ? portfolioItemsWeb3Cards.en : portfolioItemsWeb3Cards.fr
+  const web3ProCompany =
+    lang === 'en' ? web3ProExperiences.en : web3ProExperiences.fr
+  const web3ProProjectCards = lang === 'en' ? web3ProCards.en : web3ProCards.fr
 
   if (!mounted) return null
 
   return (
-    <section id="experience" className="relative z-10 px-6 py-12 sm:p-16 xs:p-8">
+    <section
+      id="experience"
+      className="relative z-10 px-6 py-12 sm:p-16 xs:p-8"
+    >
       <PersonalProjects
         typingText={typingText}
         title={title}

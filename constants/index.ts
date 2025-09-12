@@ -21,16 +21,9 @@ export const getStartedContent = {
 }
 
 export const startingFeatures = {
-  fr: [
-    'En tant que développeur web3 full stack, je me consacre à des applications Web innovantes',
-    'Je réalise des projets mettant en avant le développement web3 avec mon expertise Next.js',
-    "J'explore de nouvelles technologies et fais avancer les utilisations des blockchains",
-  ],
-  en: [
-    'As a full-stack web3 developer, I dedicate myself to innovative web applications',
-    'I carry out projects highlighting web3 development with my Next.js expertise',
-    'I explore new technologies and advance the uses of blockchains',
-  ],
+  fr: 'Je développe des applications Web TypeScript innovantes avec Next.js et Encore-js, intégrant APIs, bases de données et microservices.',
+
+  en: 'I develop innovative TypeScript web applications with Next.js and Encore-js, integrating APIs, databases and microservices.',
 }
 
 export const aboutMeContent = {
@@ -96,14 +89,6 @@ export const myPortfolioItemsWebsite = {
       ],
     },
     {
-      imgFile: 'crypto-leetchi_1200w900h.jpg',
-      title: 'Crypto Leetchi',
-      subtitle:
-        'Développement d’une Dapp Web3 réalisé dans le cadre d’une formation blockchain à la Wild Code School.',
-      href: 'https://leetchi.ethprod.xyz/home',
-      tags: ['react', 'ethers', 'ipfs'],
-    },
-    {
       imgFile: 'couleurpartage_900w675h.png',
       title: 'Couleur et partage',
       subtitle:
@@ -118,6 +103,14 @@ export const myPortfolioItemsWebsite = {
         'Conception d’un outil de gestion des priorités permettant le suivi, la classification et la résolution des erreurs issues des journaux des serveurs backend.',
       href: 'https://nextjs-markdown-qa.vercel.app/',
       tags: ['nextjs', 'mdx'],
+    },
+    {
+      imgFile: 'crypto-leetchi_1200w900h.jpg',
+      title: 'Crypto Leetchi',
+      subtitle:
+        'Développement d’une Dapp Web3 réalisé dans le cadre d’une formation blockchain à la Wild Code School.',
+      href: 'https://dapp-crypto-leetchi.vercel.app/',
+      tags: ['react', 'ethers', 'ipfs'],
     },
   ],
   en: [
@@ -137,14 +130,7 @@ export const myPortfolioItemsWebsite = {
         'flyio',
       ],
     },
-    {
-      imgFile: 'crypto-leetchi_1200w900h.jpg',
-      title: 'Crypto Leetchi',
-      subtitle:
-        'Development of a Web3 Dapp as part of a blockchain training program at Wild Code School.',
-      href: 'https://leetchi.ethprod.xyz/home',
-      tags: ['react', 'ethers', 'ipfs'],
-    },
+
     {
       imgFile: 'couleurpartage_900w675h.png',
       title: 'Couleur et partage',
@@ -160,6 +146,14 @@ export const myPortfolioItemsWebsite = {
         'Design of a priority management tool for tracking, classifying, and resolving errors from backend server logs.',
       href: 'https://nextjs-markdown-qa.vercel.app/',
       tags: ['nextjs', 'mdx'],
+    },
+    {
+      imgFile: 'crypto-leetchi_1200w900h.jpg',
+      title: 'Crypto Leetchi',
+      subtitle:
+        'Development of a Web3 Dapp as part of a blockchain training program at Wild Code School.',
+      href: 'https://dapp-crypto-leetchi.vercel.app/',
+      tags: ['react', 'ethers', 'ipfs'],
     },
   ],
 }
@@ -208,7 +202,7 @@ export const web3ProExperiences = {
   ],
 }
 
-export const portfolioItemsWeb3Cards = {
+export const web3ProCards = {
   fr: [
     {
       name: '',
@@ -217,7 +211,7 @@ export const portfolioItemsWeb3Cards = {
       logo_link: '',
       logo_img: '',
       source_img_link: '',
-      collection: 'news',
+      collection: 'web3',
     },
     {
       name: 'Dapp',
@@ -227,7 +221,7 @@ export const portfolioItemsWeb3Cards = {
       logo_link: 'https://evm.app.feature.sh/',
       logo_img: 'feature-logo_100w.png',
       source_img_link: 'https://evm.app.feature.sh/',
-      collection: 'news',
+      collection: 'web3',
     },
     {
       name: 'Dashboard',
@@ -237,7 +231,7 @@ export const portfolioItemsWeb3Cards = {
       logo_link: 'https://dashboard.feature.sh/',
       logo_img: 'feature-logo_100w.png',
       source_img_link: 'https://dashboard.feature.sh/',
-      collection: 'news',
+      collection: 'web3',
     },
     {
       name: 'Jobsboard',
@@ -247,7 +241,7 @@ export const portfolioItemsWeb3Cards = {
       logo_link: 'https://jobs.feature.sh/jobs/',
       logo_img: 'feature-logo_100w.png',
       source_img_link: 'https://jobs.feature.sh/jobs/',
-      collection: 'news',
+      collection: 'web3',
     },
     {
       name: '_mastercode',
@@ -257,7 +251,7 @@ export const portfolioItemsWeb3Cards = {
       logo_link: 'https://mastercode.cc/fr',
       logo_img: 'feature-logo_100w.png',
       source_img_link: 'https://mastercode.cc/fr',
-      collection: 'news',
+      collection: 'web3',
     },
   ],
   en: [
@@ -268,7 +262,7 @@ export const portfolioItemsWeb3Cards = {
       logo_link: '',
       logo_img: '',
       source_img_link: '',
-      collection: 'news',
+      collection: 'web3',
     },
     {
       name: 'Dapp',
@@ -278,7 +272,7 @@ export const portfolioItemsWeb3Cards = {
       logo_link: 'https://evm.app.feature.sh/',
       logo_img: 'feature-logo_100w.png',
       source_img_link: 'https://evm.app.feature.sh/',
-      collection: 'news',
+      collection: 'web3',
     },
     {
       name: 'Dashboard',
@@ -288,7 +282,7 @@ export const portfolioItemsWeb3Cards = {
       logo_link: 'https://dashboard.feature.sh/',
       logo_img: 'feature-logo_100w.png',
       source_img_link: 'https://dashboard.feature.sh/',
-      collection: 'news',
+      collection: 'web3',
     },
     {
       name: 'Jobsboard',
@@ -298,7 +292,7 @@ export const portfolioItemsWeb3Cards = {
       logo_link: 'https://jobs.feature.sh/jobs/',
       logo_img: 'feature-logo_100w.png',
       source_img_link: 'https://jobs.feature.sh/jobs/',
-      collection: 'news',
+      collection: 'web3',
     },
     {
       name: '_mastercode',
@@ -308,7 +302,7 @@ export const portfolioItemsWeb3Cards = {
       logo_link: 'https://mastercode.cc/en',
       logo_img: 'feature-logo_100w.png',
       source_img_link: 'https://mastercode.cc/en',
-      collection: 'news',
+      collection: 'web3',
     },
   ],
 }
@@ -353,7 +347,7 @@ export const newFeatureCards = {
       imgFile: 'flexiweb-evo_1280wx960h.png',
       logo_link: '',
       logo_img: '',
-      source_img_link: '',
+      source_img_link: 'https://www.flexiweb-evo.eu/',
       collection: 'news',
     },
   ],
@@ -364,7 +358,7 @@ export const newFeatureCards = {
       imgFile: 'flexiweb-evo_1280wx960h.png',
       logo_link: '',
       logo_img: '',
-      source_img_link: '',
+      source_img_link: 'https://www.flexiweb-evo.eu/en',
       collection: 'news',
     },
   ],

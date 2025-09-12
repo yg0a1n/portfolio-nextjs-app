@@ -4,11 +4,9 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion'
 import { useQRCode } from 'next-qrcode'
 
-import TitleText from '@/components/title-text'
 import TypingText from '@/components/typing-text'
 import { getStartedContent, startingFeatures } from '@/constants'
 
-import StartSteps from '@/components/start-steps'
 import { fadeIn, staggerContainer } from '@/utils/motion'
 
 export default function Hero({ lang }: { lang: string }) {
@@ -32,10 +30,9 @@ export default function Hero({ lang }: { lang: string }) {
         <div className="flex-[0.35] flex justify-center items-center">
           <motion.img
             variants={fadeIn('right', 'tween', 0.3, 1)}
-            src="/img/photo-identité_280w.webp"
+            src="/img/photo-linkedIn.jpeg"
             alt="Yannick goalen identity photo"
-            className="object-contain w-full max-w-lg rounded-lg"
-            style={{ maxWidth: '500px', minWidth: '250px' }}
+            className="object-cover w-40 h-40 rounded-full"
           />
         </div>
         <motion.div
@@ -43,15 +40,13 @@ export default function Hero({ lang }: { lang: string }) {
           className="flex-[0.75] flex justify-center flex-col"
         >
           <TypingText title={typingText} />
-          <TitleText title={<>{title}</>} />
           <div className="mt-[31px] flex flex-col max-w-[470px] gap-[24px]">
-            {startingFeaturesTranslate.map((feature, index) => (
-              <StartSteps
-                key={feature}
-                number={`${index < 10 ? '0' : ''} ${index + 1}`}
-                text={feature}
-              />
-            ))}
+            <div className="flex flex-row justify-center items-center">
+              <p className="flex-1 ml-[30px] font-normal text-md leading-[32.4px] text-justify">
+                {startingFeaturesTranslate}
+              </p>
+            </div>
+
             <div className="flex gap-4 justify-between items-center">
               <div className="flex gap-2 items-center">
                 {linkText}
@@ -65,29 +60,6 @@ export default function Hero({ lang }: { lang: string }) {
                   <ArrowTopRightOnSquareIcon className="w-6 h-6 text-gray-500" />
                 </a>
               </div>
-              <a
-                href="https://storage.googleapis.com/cv-pwahost/CV_DEV_Y.Goalen.pdf"
-                className="cv-icon"
-                title="Web and Mobile Web Developer Resume"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Canvas
-                  text={
-                    'https://storage.googleapis.com/cv-pwahost/CV_DEV_Y.Goalen.pdf'
-                  }
-                  options={{
-                    errorCorrectionLevel: 'M',
-                    margin: 3,
-                    scale: 4,
-                    width: 120,
-                    color: {
-                      dark: '#FFF',
-                      light: '#000',
-                    },
-                  }}
-                />
-              </a>
             </div>
           </div>
         </motion.div>
