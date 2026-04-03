@@ -73,6 +73,14 @@ export const myPortfolioItems = {
 export const myPortfolioItemsWebsite = {
   fr: [
     {
+      imgFile: 'bottyn-social.png',
+      title: 'boTTyn Social',
+      subtitle:
+        'boTTyn Social organise votre identité numérique et vos relations pour être trouvé facilement par les bonnes personnes, au bon moment.',
+      href: 'https://www.bottyn.fr/',
+      tags: ['nextjs', 'tailwind', 'encore-js'],
+    },
+    {
       imgFile: 'nextjs-starter-ui-kit_900w675h.png',
       title: 'Kit de démarrage Next.js 15',
       subtitle:
@@ -104,16 +112,16 @@ export const myPortfolioItemsWebsite = {
       href: 'https://nextjs-markdown-qa.vercel.app/',
       tags: ['nextjs', 'mdx'],
     },
-    {
-      imgFile: 'crypto-leetchi_1200w900h.jpg',
-      title: 'Crypto Leetchi',
-      subtitle:
-        'Développement d’une Dapp Web3 réalisé dans le cadre d’une formation blockchain à la Wild Code School.',
-      href: 'https://dapp-crypto-leetchi.vercel.app/',
-      tags: ['react', 'ethers', 'ipfs'],
-    },
   ],
   en: [
+    {
+      imgFile: 'bottyn-social.png',
+      title: 'boTTyn Social',
+      subtitle:
+        'boTTyn Social organizes your digital identity and relationships so you can be easily found by the right people at the right time.',
+      href: 'https://www.bottyn.fr/',
+      tags: ['nextjs', 'tailwind', 'encore-js'],
+    },
     {
       imgFile: 'nextjs-starter-ui-kit_900w675h.png',
       title: 'Next.js 15 Starter Kit',
@@ -130,7 +138,6 @@ export const myPortfolioItemsWebsite = {
         'flyio',
       ],
     },
-
     {
       imgFile: 'couleurpartage_900w675h.png',
       title: 'Couleur et partage',
@@ -146,14 +153,6 @@ export const myPortfolioItemsWebsite = {
         'Design of a priority management tool for tracking, classifying, and resolving errors from backend server logs.',
       href: 'https://nextjs-markdown-qa.vercel.app/',
       tags: ['nextjs', 'mdx'],
-    },
-    {
-      imgFile: 'crypto-leetchi_1200w900h.jpg',
-      title: 'Crypto Leetchi',
-      subtitle:
-        'Development of a Web3 Dapp as part of a blockchain training program at Wild Code School.',
-      href: 'https://dapp-crypto-leetchi.vercel.app/',
-      tags: ['react', 'ethers', 'ipfs'],
     },
   ],
 }
@@ -513,25 +512,21 @@ export const worldsContents = {
 export const feedbacksContents = {
   fr: {
     title: 'Yannick',
-    subtitle: 'Mes curriculum vitae',
-    content: `“Souvent très qualifiés dans mes fonctions, au fil des années je suis
-    resté un autodidacte passionné. Voici mon carnet de bord de toutes mes
-    expériences. C'est aussi un peu mon carnet de voyage.”`,
+    subtitle: 'Mon parcours',
+    content: `“Souvent très qualifié dans mes fonctions, je suis resté au fil des années un autodidacte passionné, avec une forte appétence pour les nouvelles technologies. Ce parcours retrace mon évolution — un carnet de bord, qui reflète également une partie de mon chemin personnel.”`,
   },
   en: {
     title: 'Yannick',
-    subtitle: 'My curriculum vitae',
-    content: `“Often very qualified in my functions, over the years I have
-    remained a passionate self-taught. Here is my logbook of all my
-    experiences. It's also a bit of my travel diary.”`,
+    subtitle: 'My journey',
+    content: `“While often highly qualified in my roles, I have remained over the years a passionate self-taught individual with a strong affinity for new technologies. This account traces my evolution—a logbook that also reflects a part of my personal journey.”`,
   },
 }
 
 export const footerContents = {
   fr: {
-    copyright: '© 2025 Portfolio. Tous droits réservés.',
+    copyright: '© 2026 Portfolio. Tous droits réservés.',
   },
   en: {
-    copyright: '© 2025 Portfolio. All rights reserved.',
+    copyright: '© 2026 Portfolio. All rights reserved.',
   },
 }

@@ -15,12 +15,12 @@ import ThemeButton from './theme-button'
 export default function Navbar() {
   const [mounted, setMounted] = useState(false)
   const [isDark, setIsDark] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { theme, resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
-    setIsDark(theme === 'dark')
-  }, [setIsDark, theme])
+    setIsDark(resolvedTheme === 'dark')
+  }, [setIsDark, resolvedTheme])
 
   const pathname = usePathname()
   const href = pathname === '/en' ? '/fr' : '/en'

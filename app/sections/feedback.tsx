@@ -1,11 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
-import Link from 'next/link'
 
 import { feedbacksContents } from '@/constants'
 import { fadeIn, staggerContainer } from '@/utils/motion'
+import Image from 'next/image'
 
 export default function Feedback({ lang }: { lang: string }) {
   const { title, subtitle, content } =
@@ -22,7 +21,7 @@ export default function Feedback({ lang }: { lang: string }) {
       >
         <motion.div
           variants={fadeIn('right', 'tween', 0.2, 1)}
-          className="flex-[0.5] lg:max-w-[370px] flex justify-end flex-col gradient-05 sm:p-8 p-4 rounded-[32px] border-[1px] border-[#6A6A6A] relative"
+          className="flex-[0.5] lg:max-w-[670px] flex justify-end flex-col gradient-05 sm:p-8 p-4 rounded-[32px] border-[1px] border-[#6A6A6A] relative"
         >
           <div className="feedback-gradient" />
           <div>
@@ -43,15 +42,13 @@ export default function Feedback({ lang }: { lang: string }) {
           variants={fadeIn('left', 'tween', 0.2, 1)}
           className="flex relative flex-1 justify-center items-center"
         >
-          <Link href="https://onlinecvs.xyz/">
-            <Image
-              src="/img/perform-cv_1900wx1428h.png"
-              alt="perform-cv"
-              className="w-full lg:h-[610px] h-auto min-h-[210px] object-cover rounded-[40px]"
-              width={500}
-              height={500}
-            />
-          </Link>
+          <Image
+            src="/img/moi-pro.jpg"
+            alt="photo professionnelle"
+            className="w-full h-auto max-h-[600px] object-cover object-[50%_20%] rounded-[40px] overflow-hidden"
+            width={3081}
+            height={4621}
+          />
         </motion.div>
       </motion.div>
     </section>

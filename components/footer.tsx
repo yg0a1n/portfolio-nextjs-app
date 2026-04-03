@@ -12,12 +12,12 @@ import SocialAssets from './social-assets'
 export default function Footer({ lang }: { lang: string }) {
   const [mounted, setMounted] = useState(false)
   const [isDark, setIsDark] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
-    setIsDark(theme === 'dark')
-  }, [setIsDark, theme])
+    setIsDark(resolvedTheme === 'dark')
+  }, [setIsDark, resolvedTheme])
 
   const { copyright } = lang === 'en' ? footerContents.en : footerContents.fr
 

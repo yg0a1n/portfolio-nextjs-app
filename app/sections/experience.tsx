@@ -17,12 +17,12 @@ import {
 export default function Experience({ lang }: { lang: string }) {
   const [mounted, setMounted] = useState(false)
   const [isDark, setIsDark] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
-    setIsDark(theme === 'dark')
-  }, [setIsDark, theme])
+    setIsDark(resolvedTheme === 'dark')
+  }, [setIsDark, resolvedTheme])
 
   const { typingText, title } =
     lang === 'en' ? myPortfolioItems.en : myPortfolioItems.fr
