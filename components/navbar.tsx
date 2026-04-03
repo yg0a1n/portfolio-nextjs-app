@@ -52,7 +52,7 @@ export default function Navbar() {
             <ThemeButton theme={theme} setTheme={setTheme} />
           </div>
           <Link
-            href="https://github.com/yg0a1n/nextjs-14-portfolio"
+            href="https://github.com/yg0a1n/portfolio-nextjs-app"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2"
