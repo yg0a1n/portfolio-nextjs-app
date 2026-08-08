@@ -29,33 +29,25 @@ export const startingFeatures = {
 export const aboutMeContent = {
   fr: {
     typingText: '| Qui suis-je?',
-    title: 'Je suis un développeur web3 full stack',
+    title: 'Je suis développeur Full Stack',
     beforeText: 'En tant que',
-    boldText: ' développeur web3 full stack ',
-    content: `, Je m'intéresse activement aux fonctionnalités avancées de la
-      blockchain pour créer des expériences utilisateurs uniques et sécurisées.
-      Avec mon expertise en Next.js, je réalise des projets mettant en avant le 
-      potentiel du développement web3. Mon objectif est de repousser les limites
-      technologiques, collaborant avec des équipes talentueuses. Je vise à
-      transformer les interactions en ligne avec des applications web3
-      innovantes, ouvrant de nouvelles opportunités pour les utilisateurs du
-      monde entier. Je suis passionné par l'évolution du Web3 et son impact
-      sur l'avenir de la technologie.`,
+    boldText: ' développeur Full Stack ',
+    content: `, mon métier est de transformer un besoin métier en solution
+      numérique — l'IA n'intervient que lorsqu'elle apporte une valeur
+      mesurable. Je suis à l'aise quand le besoin est encore flou et qu'il faut
+      le rendre concret. Et parce qu'une bonne solution naît de la compréhension
+      du terrain, je la construis avec les experts métier plutôt que seul.`,
   },
   en: {
     typingText: '| Who am I?',
-    title: 'I am a full-stack web3 developer',
+    title: 'I am a Full-Stack developer',
     beforeText: 'As a',
-    boldText: ' full-stack web3 developer ',
-    content: `, I integrate advanced web3 features to create
-      unique and secure user experiences. With my expertise in
-      Next.js, I realize projects highlighting the potential of the
-      web3 development. My goal is to push the
-      technological limits, collaborating with talented teams. I aim to
-      transform online interactions with innovative Web3 applications,
-      opening up new opportunities for users around the world. I am
-      passionate about the evolution of Web3 and its impact on the future of
-      technology.`,
+    boldText: ' Full-Stack developer ',
+    content: `, my craft is turning a business need into a digital solution —
+      AI only steps in when it brings measurable value. I'm at my best when the
+      need is still fuzzy and has to be made concrete. And because a good
+      solution grows from understanding the field, I build it with domain
+      experts rather than alone.`,
   },
 }
 
@@ -77,12 +69,14 @@ export const myPortfolioItemsWebsite = {
       title: 'boTTyn Social',
       subtitle:
         'boTTyn Social organise votre identité numérique et vos relations pour être trouvé facilement par les bonnes personnes, au bon moment.',
+      demoText:
+        'Chaque jour, quelqu’un vous cherche et ne vous trouve pas. boTTyn y répond, sur mobile comme sur le web : une présence en ligne vraie et crédible qui vous rend visible et reconnu pour ce que vous êtes.',
       href: 'https://www.bottyn.fr/',
       tags: ['nextjs', 'tailwind', 'encore-js'],
     },
     {
       imgFile: 'nextjs-starter-ui-kit_900w675h.png',
-      title: 'Kit de démarrage Next.js 15',
+      title: 'Kit de démarrage Next.js',
       subtitle:
         'Starter Next.js 15 avec Tailwind CSS et shadcn/ui, intègre Docker et GitHub Actions pour un déploiement CI/CD automatisé sur Fly.io.',
       href: 'https://starter-next15-ui-kit.vercel.app/',
@@ -119,6 +113,8 @@ export const myPortfolioItemsWebsite = {
       title: 'boTTyn Social',
       subtitle:
         'boTTyn Social organizes your digital identity and relationships so you can be easily found by the right people at the right time.',
+      demoText:
+        'Every day, someone is looking for you and can’t find you. boTTyn answers that, on mobile and on the web: a genuine, credible online presence that makes you visible and recognized for who you really are.',
       href: 'https://www.bottyn.fr/',
       tags: ['nextjs', 'tailwind', 'encore-js'],
     },
@@ -312,27 +308,27 @@ export const newFeaturesContent = {
     title: `Qu'en est-il de mon travail actuel?`,
   },
   en: {
-    typingText: '| My previous role"',
-    title: 'What about my previous work?',
+    typingText: '| My current role',
+    title: 'What about my current work?',
   },
 }
 
 export const newFeatures = {
   fr: [
     {
-      imgFile: 'flexiweb-evo-logo-310w.png',
-      title: 'Développeur Web Freelance',
+      imgFile: 'flexiweb-evo-logo-192.png',
+      title: 'Développeur Produits SaaS & IA',
       subtitle:
-        'Spécialisé dans la création de solutions web, de la landing page à l’application complète, adaptées à vos besoins et objectifs.',
+        'Avec FlexiWeb EVO, mon auto-entreprise, je conçois des produits SaaS et des solutions IA pour les TPE/PME, de l’idée au déploiement.',
       href: 'https://www.flexiweb-evo.eu/',
     },
   ],
   en: [
     {
-      imgFile: 'feature-logo_100w.png',
-      title: 'Freelance Web Developer',
+      imgFile: 'flexiweb-evo-logo-192.png',
+      title: 'SaaS & AI Products Developer',
       subtitle:
-        'Specializing in the creation of web solutions, from landing pages to complete applications, adapted to your needs and objectives.',
+        'With FlexiWeb EVO, my own business, I build SaaS products and AI solutions for small businesses, from idea to deployment.',
       href: 'https://www.flexiweb-evo.eu/',
     },
   ],
@@ -343,7 +339,7 @@ export const newFeatureCards = {
     {
       name: '',
       description: '',
-      imgFile: 'flexiweb-evo_1280wx960h.png',
+      imgFile: 'flexiweb-evo-og.png',
       logo_link: '',
       logo_img: '',
       source_img_link: 'https://www.flexiweb-evo.eu/',
@@ -354,7 +350,7 @@ export const newFeatureCards = {
     {
       name: '',
       description: '',
-      imgFile: 'flexiweb-evo_1280wx960h.png',
+      imgFile: 'flexiweb-evo-og.png',
       logo_link: '',
       logo_img: '',
       source_img_link: 'https://www.flexiweb-evo.eu/en',

@@ -1,3 +1,5 @@
+import { Fragment } from 'react'
+
 import RealizationsCard from '@/components/realizations-card'
 import TitleText from '@/components/title-text'
 import TypingText from '@/components/typing-text'
@@ -30,12 +32,36 @@ export default function PersonalProjects({
       </motion.div>
       <div className="mt-[50px] flex flex-col gap-[30px]">
         {personalProjects.map((project, index) => (
-          <RealizationsCard
-            key={`realizations-${index}`}
-            index={index}
-            {...project}
-            isDark={isDark}
-          />
+          <Fragment key={`realizations-${index}`}>
+            <RealizationsCard index={index} {...project} isDark={isDark} />
+            {index === 0 && (
+              <div className="flex flex-col gap-4 rounded-3xl border border-black/10 dark:border-slate-50/10 p-6">
+                <p className="font-normal lg:text-[20px] text-[14px] text-secondary-white">
+                  {project.demoText}
+                </p>
+                <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:justify-center">
+                  <video
+                    src="/img/bottyn-slide1-mobile.mp4"
+                    poster="/img/bottyn-slide1-mobile-poster.jpg"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="h-[400px] w-auto rounded-2xl"
+                  />
+                  <video
+                    src="/img/bottyn-slide2-bis.mp4"
+                    poster="/img/bottyn-slide2-poster.jpg"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="h-[400px] w-auto max-w-full rounded-2xl"
+                  />
+                </div>
+              </div>
+            )}
+          </Fragment>
         ))}
       </div>
     </motion.div>
