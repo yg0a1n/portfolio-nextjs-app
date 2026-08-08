@@ -26,6 +26,11 @@ const aiCrawlers = [
 module.exports = {
   siteUrl,
   generateRobotsTxt: true,
+  // `/fr` sert la même page que `/` et son canonical renvoie vers `/` : l'y lister
+  // contredirait ce canonical, alors qu'un sitemap n'annonce que des canoniques.
+  // `/llms.txt` n'est pas une page mais une ressource pour agents ; elle se découvre
+  // par son chemin conventionnel, pas par l'index des pages à explorer.
+  exclude: ['/fr', '/llms.txt'],
   robotsTxtOptions: {
     policies: [
       { userAgent: '*', allow: '/' },
