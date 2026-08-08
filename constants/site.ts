@@ -6,10 +6,16 @@
  * de prod plutôt que localhost, pour qu'une variable manquante dégrade en URLs justes
  * au lieu de publier un graphe pointant vers localhost. En développement, le `.env`
  * définit la variable sur localhost et reste prioritaire.
+ *
+ * Le slash final est retiré : la valeur définie en Production en porte un, et comme
+ * tout le reste du fichier compose `${siteUrl}/…`, les `@id` du graphe et les
+ * `hreflang` sortaient avec un double slash. Normaliser ici plutôt qu'à chaque appel
+ * évite que le défaut revienne au prochain usage.
  */
-export const siteUrl =
+export const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ||
   'https://portfolio-nextjs-app-gamma.vercel.app'
+).replace(/\/+$/, '')
 
 export const person = {
   name: 'Yannick Goalen',
