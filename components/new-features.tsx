@@ -25,9 +25,9 @@ const NewFeatures = ({
           />
         </div>
       </Link>
-      <h1 className="ml-6 font-bold text-[24px] leading-[30.24px] sm:whitespace-nowrap">
+      <h3 className="ml-6 font-bold text-[24px] leading-[30.24px] sm:whitespace-nowrap">
         {title}
-      </h1>
+      </h3>
     </div>
     <p className="flex-1 mt-[16px] font-normal text-md leading-[32.4px] text-justify">
       {subtitle}

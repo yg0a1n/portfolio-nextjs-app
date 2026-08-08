@@ -7,13 +7,35 @@ import Tasks from '@/app/sections/tasks'
 import Title from '@/app/sections/title'
 import World from '@/app/sections/world'
 import Footer from '@/components/footer'
+import JsonLd from '@/components/json-ld'
 import Navbar from '@/components/navbar'
+import { canonicalPath, languageAlternates, siteMeta } from '@/constants/site'
+import { buildStructuredData } from '@/utils/structured-data'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: siteMeta.fr.title,
+  description: siteMeta.fr.description,
+  // Doublon de `/` : le canonical y renvoie pour ne pas diviser le signal.
+  alternates: {
+    canonical: canonicalPath.fr,
+    languages: languageAlternates,
+  },
+  openGraph: {
+    type: 'profile',
+    title: siteMeta.fr.title,
+    description: siteMeta.fr.description,
+    url: canonicalPath.fr,
+    locale: siteMeta.fr.locale,
+  },
+}
 
 export default async function Home() {
   return (
     <div className="overflow-hidden bg-primary-black">
+      <JsonLd data={buildStructuredData('fr')} />
       <Navbar />
-      <Title />
+      <Title lang="fr" />
       <div className="relative">
         <Hero lang="fr" />
         <div className="z-0 gradient-03" />
