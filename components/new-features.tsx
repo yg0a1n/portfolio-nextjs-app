@@ -12,7 +12,7 @@ const NewFeatures = ({
   subtitle: string
   href: string
 }) => (
-  <div className="flex-1 sm:max-w-[350px] min-w-[210px]">
+  <div className="flex-1 sm:max-w-[560px] min-w-[210px]">
     <div className="flex flex-row items-center">
       <Link href={href}>
         <div className="flex justify-center items-center w-[70px] h-[70px] rounded-[24px] bg-[var(--secondary)] dark:bg-[var(--secondary)]">
@@ -25,7 +25,9 @@ const NewFeatures = ({
           />
         </div>
       </Link>
-      <h1 className="ml-6 font-bold text-[24px] leading-[30.24px]">{title}</h1>
+      <h1 className="ml-6 font-bold text-[24px] leading-[30.24px] sm:whitespace-nowrap">
+        {title}
+      </h1>
     </div>
     <p className="flex-1 mt-[16px] font-normal text-md leading-[32.4px] text-justify">
       {subtitle}

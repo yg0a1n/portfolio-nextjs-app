@@ -35,8 +35,9 @@ export const aboutMeContent = {
     content: `, mon métier est de transformer un besoin métier en solution
       numérique — l'IA n'intervient que lorsqu'elle apporte une valeur
       mesurable. Je suis à l'aise quand le besoin est encore flou et qu'il faut
-      le rendre concret. Et parce qu'une bonne solution naît de la compréhension
-      du terrain, je la construis avec les experts métier plutôt que seul.`,
+      le rendre concret. La qualité d'une solution tient à la compréhension du
+      terrain : je travaille aux côtés des experts métier, convaincu que
+      plusieurs expertises construisent mieux qu'une seule.`,
   },
   en: {
     typingText: '| Who am I?',
@@ -45,9 +46,9 @@ export const aboutMeContent = {
     boldText: ' Full-Stack developer ',
     content: `, my craft is turning a business need into a digital solution —
       AI only steps in when it brings measurable value. I'm at my best when the
-      need is still fuzzy and has to be made concrete. And because a good
-      solution grows from understanding the field, I build it with domain
-      experts rather than alone.`,
+      need is still fuzzy and has to be made concrete. A solution's quality
+      comes from understanding the field: I work alongside domain experts,
+      convinced that several kinds of expertise build better than one.`,
   },
 }
 
@@ -305,7 +306,7 @@ export const web3ProCards = {
 export const newFeaturesContent = {
   fr: {
     typingText: '| Mon rôle actuel',
-    title: `Qu'en est-il de mon travail actuel?`,
+    title: `Qu'en est-il de mon travail actuel ?`,
   },
   en: {
     typingText: '| My current role',
