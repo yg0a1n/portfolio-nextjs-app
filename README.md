@@ -123,3 +123,7 @@ et aucun contrôle Vercel sur la PR. Les changements se valident **en local** (`
 | Icônes | Heroicons, React Icons |
 | SEO | `next-sitemap`, JSON-LD maison |
 | Polices | Playfair Display et Geist Mono, chargées localement (`next/font/local`) |
+
+## Licence
+
+Sous licence MIT — voir [`LICENSE.md`](LICENSE.md).
