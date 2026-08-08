@@ -1,4 +1,8 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+// Le slash final est retiré : la valeur définie en Production en porte un, ce qui
+// produisait une entrée `Sitemap:` à double slash.
+const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+).replace(/\/+$/, '')
 
 /**
  * Les crawlers IA sont autorisés nommément. Sans règle à leur nom ils héritent de `*`,
@@ -27,6 +31,5 @@ module.exports = {
       { userAgent: '*', allow: '/' },
       ...aiCrawlers.map((userAgent) => ({ userAgent, allow: '/' })),
     ],
-    additionalSitemaps: [`${siteUrl}/sitemap.xml`],
   },
 }
