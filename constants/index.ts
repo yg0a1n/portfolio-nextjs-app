@@ -124,7 +124,7 @@ export const myPortfolioItemsWebsite = {
       title: 'Next.js 15 Starter Kit',
       subtitle:
         'Next.js 15 starter with Tailwind CSS and shadcn/ui, includes Docker and GitHub Actions for automated CI/CD deployment on Fly.io.',
-      href: 'https://nextjs-14-portfolio.vercel.app/',
+      href: 'https://starter-next15-ui-kit.vercel.app/',
       tags: [
         'nextjs15',
         'tailwindcss',
