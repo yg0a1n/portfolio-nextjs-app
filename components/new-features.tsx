@@ -25,7 +25,7 @@ const NewFeatures = ({
           />
         </div>
       </Link>
-      <h3 className="ml-6 font-bold text-[24px] leading-[30.24px] sm:whitespace-nowrap">
+      <h3 className="ml-6 font-bold text-[24px] leading-[30.24px]">
         {title}
       </h3>
     </div>
