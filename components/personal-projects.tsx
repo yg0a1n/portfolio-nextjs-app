@@ -26,6 +26,8 @@ export default function PersonalProjects({
     tags: string[]
     sites: React.ComponentProps<typeof EcosystemSites>['sites']
     siteLabel: string
+    pauseLabel: string
+    playLabel: string
   }
   isDark: boolean
 }) {
@@ -58,7 +60,12 @@ export default function PersonalProjects({
               tags={ecosystem.tags}
               isDark={isDark}
             />
-            <EcosystemSites sites={ecosystem.sites} siteLabel={ecosystem.siteLabel} />
+            <EcosystemSites
+              sites={ecosystem.sites}
+              siteLabel={ecosystem.siteLabel}
+              pauseLabel={ecosystem.pauseLabel}
+              playLabel={ecosystem.playLabel}
+            />
           </>
         )}
         {personalProjects.map((project, index) => (

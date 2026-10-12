@@ -155,8 +155,8 @@ export const myPortfolioItemsWebsite = {
 }
 
 // Écosystème FlexiWeb EVO, affiché avant boTTyn Social. Images = captures du hero de chaque site au
-// 2026-10-12 (pour data, diag et b2b : leurs og-images publiées ; pour www : la même capture que son
-// og-image-v2) : à refaire sous un NOUVEAU nom si un hero change, le cache
+// 2026-10-12 (data, diag, b2b, ass : leurs og-images publiées ; www : la même capture que son og-image-v2 ;
+// form : capture de son accueil, il n'a pas d'og-image propre) : à refaire sous un NOUVEAU nom si un hero change, le cache
 // d'images garderait sinon l'ancienne capture.
 const ecosystemSites = [
   {
@@ -174,6 +174,16 @@ const ecosystemSites = [
     name: 'Site Express',
     href: 'https://b2b.flexiweb-evo.eu/',
   },
+  {
+    imgFile: 'ecosysteme/flexiweb-evo-ass.png',
+    name: 'Assistant Terrain',
+    href: 'https://ass.flexiweb-evo.eu/',
+  },
+  {
+    imgFile: 'ecosysteme/flexiweb-evo-form.png',
+    name: 'Auto-diagnostic',
+    href: 'https://form.flexiweb-evo.eu/',
+  },
 ]
 
 export const flexiwebEcosystem = {
@@ -181,21 +191,25 @@ export const flexiwebEcosystem = {
     imgFile: 'ecosysteme/flexiweb-evo-www.png',
     title: 'Écosystème FlexiWeb EVO',
     subtitle:
-      'FlexiWeb EVO, c’est mon activité de développeur indépendant à Toulon : je conçois et j’opère des produits web et IA pour les TPE et PME. Un site principal et des produits sur leurs propres sous-domaines : catalogues interrogeables avec leur source, diagnostic IA, sites vitrines lisibles par l’IA.',
+      'Mon activité de développeur indépendant à Toulon : des produits web et IA pour les TPE et PME, chacun sur son sous-domaine.',
     href: 'https://www.flexiweb-evo.eu/',
     tags: ['nextjs', 'tailwind', 'vercel', 'github-actions'],
     sites: ecosystemSites,
     siteLabel: 'Ouvrir',
+    pauseLabel: 'Pause',
+    playLabel: 'Lecture',
   },
   en: {
     imgFile: 'ecosysteme/flexiweb-evo-www.png',
     title: 'FlexiWeb EVO ecosystem',
     subtitle:
-      'FlexiWeb EVO is my independent developer business in Toulon, France: I design and run web and AI products for small businesses. One main site and products on their own subdomains: catalogs searchable with their source, an AI assessment, showcase websites readable by AI.',
+      'My independent developer business in Toulon: web and AI products for small businesses, each on its own subdomain.',
     href: 'https://www.flexiweb-evo.eu/en',
     tags: ['nextjs', 'tailwind', 'vercel', 'github-actions'],
     sites: ecosystemSites,
     siteLabel: 'Open',
+    pauseLabel: 'Pause',
+    playLabel: 'Play',
   },
 }
 
