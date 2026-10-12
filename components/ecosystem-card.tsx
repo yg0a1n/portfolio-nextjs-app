@@ -22,7 +22,7 @@ const GAP_PX = 16
  * lecteurs d'écran et hors tabulation.
  *
  * WCAG 2.2.2 (contenu qui bouge plus de 5 s) : bouton pause/lecture, arrêt au survol et au
- * focus, et arrêt d'office si l'utilisateur a demandé moins d'animations. Une vignette qui prend
+ * focus. Lecture par défaut, même sous « moins d'animations » (demande yg0a1n). Une vignette qui prend
  * le focus est ramenée dans la partie visible.
  */
 export default function EcosystemSites({
@@ -43,11 +43,10 @@ export default function EcosystemSites({
   const [hold, setHold] = useState(false)
   const [reduceMotion, setReduceMotion] = useState(false)
 
+  // Lecture par défaut, y compris sous « moins d'animations » (yg0a1n, 2026-10-12) : le bouton
+  // pause suffit à 2.2.2. La préférence ne sert plus qu'à supprimer le glissement au focus.
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setReduceMotion(true)
-      setPaused(true)
-    }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) setReduceMotion(true)
   }, [])
 
   useEffect(() => {
@@ -70,7 +69,7 @@ export default function EcosystemSites({
   }, [pos, sites.length])
 
   return (
-    <div className="rounded-3xl border border-black/10 dark:border-slate-50/10 p-6">
+    <div className="rounded-3xl border border-black/10 dark:border-slate-50/10 px-6 pt-6 pb-3">
       <div
         className="overflow-hidden"
         onMouseEnter={() => setHold(true)}
@@ -101,9 +100,11 @@ export default function EcosystemSites({
                   href={site.href}
                   tabIndex={isCopy ? -1 : undefined}
                   aria-label={`${siteLabel} ${site.name} — ${new URL(site.href).hostname}`}
-                  // Anneau de focus INTÉRIEUR : l'overflow-hidden du carrousel rognait un anneau extérieur
-                  // Bicolore (trait blanc bordé de noir) : ≥ 3:1 sur n'importe quelle capture (gate #2417, #2419).
-                  className="block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-white focus-visible:shadow-[inset_0_0_0_5px_#0a0a0a]"
+                  // Anneau de focus INTÉRIEUR (l'overflow-hidden rognait un anneau extérieur) et BICOLORE (blanc
+                  // bordé de noir, ≥ 3:1 sur n'importe quelle capture), peint sur un ::after AU-DESSUS de l'image :
+                  // une ombre inset sur le lien passait sous l'<img>. Outline transparente gardée pour le mode
+                  // contraste forcé. Gate agent-tools #2417, #2419, #2421.
+                  className="relative block rounded-2xl focus-visible:outline-2 focus-visible:outline-transparent after:pointer-events-none after:absolute after:inset-0 after:rounded-2xl after:content-[''] focus-visible:after:shadow-[inset_0_0_0_2px_#fff,inset_0_0_0_5px_#0a0a0a]"
                   onFocus={() => {
                     setAnimate(!reduceMotion)
                     setPos(Math.max(0, i - (VISIBLE - 1)))
@@ -123,12 +124,12 @@ export default function EcosystemSites({
           })}
         </ul>
       </div>
-      <div className="mt-4 flex justify-end">
+      <div className="mt-2 flex justify-end">
         {/* Libellé qui change, sans aria-pressed (sinon « Lecture, enfoncé ») ; glyphes hors du nom accessible. */}
         <button
           type="button"
           onClick={() => setPaused((p) => !p)}
-          className="rounded-full border border-black/20 dark:border-slate-50/30 px-4 py-1 text-[14px]"
+          className="rounded-full border border-black/20 dark:border-slate-50/30 px-2 py-1 text-[12px] leading-4"
         >
           <span aria-hidden="true">{paused ? '▶ ' : '❚❚ '}</span>
           {paused ? playLabel : pauseLabel}

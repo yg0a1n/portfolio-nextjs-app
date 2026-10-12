@@ -155,8 +155,8 @@ export const myPortfolioItemsWebsite = {
 }
 
 // Écosystème FlexiWeb EVO, affiché avant boTTyn Social. Images = captures du hero de chaque site au
-// 2026-10-12 (data, diag, b2b, ass : leurs og-images publiées ; www : la même capture que son og-image-v2 ;
-// form : capture de son accueil, il n'a pas d'og-image propre) : à refaire sous un NOUVEAU nom si un hero change, le cache
+// 2026-10-12 (data, diag, b2b, ass : leurs og-images publiées ; www : la même capture que son og-image-v2,
+// aussi 5ᵉ vignette du carrousel à la place de form, demande yg0a1n du 2026-10-12) : à refaire sous un NOUVEAU nom si un hero change, le cache
 // d'images garderait sinon l'ancienne capture.
 const ecosystemSites = [
   {
@@ -180,9 +180,9 @@ const ecosystemSites = [
     href: 'https://ass.flexiweb-evo.eu/',
   },
   {
-    imgFile: 'ecosysteme/flexiweb-evo-form.png',
-    name: 'Auto-diagnostic',
-    href: 'https://form.flexiweb-evo.eu/',
+    imgFile: 'ecosysteme/flexiweb-evo-www.png',
+    name: 'FlexiWeb EVO',
+    href: 'https://www.flexiweb-evo.eu/',
   },
 ]
 
