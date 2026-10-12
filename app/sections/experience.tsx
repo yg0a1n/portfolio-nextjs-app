@@ -7,6 +7,7 @@ import { useTheme } from 'next-themes'
 import PersonalProjects from '@/components/personal-projects'
 import Web3Projects from '@/components/web3-projects'
 import {
+  flexiwebEcosystem,
   myPortfolioItems,
   myPortfolioItemsWeb3,
   myPortfolioItemsWebsite,
@@ -30,6 +31,8 @@ export default function Experience({ lang }: { lang: string }) {
   const personalProjects =
     lang === 'en' ? myPortfolioItemsWebsite.en : myPortfolioItemsWebsite.fr
 
+  const ecosystem = lang === 'en' ? flexiwebEcosystem.en : flexiwebEcosystem.fr
+
   const { typingText: typingTextWeb3, title: titleWeb3 } =
     lang === 'en' ? myPortfolioItemsWeb3.en : myPortfolioItemsWeb3.fr
   const web3ProCompany =
@@ -47,6 +50,7 @@ export default function Experience({ lang }: { lang: string }) {
         typingText={typingText}
         title={title}
         personalProjects={personalProjects}
+        ecosystem={ecosystem}
         isDark={isDark}
       />
       <div className="mt-20">

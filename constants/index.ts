@@ -154,6 +154,50 @@ export const myPortfolioItemsWebsite = {
   ],
 }
 
+// Écosystème FlexiWeb EVO, affiché avant boTTyn Social. Les images sont les og-images des sites
+// (captures du hero au 2026-10-12) : à refaire sous un NOUVEAU nom si un hero change, le cache
+// d'images garderait sinon l'ancienne capture.
+const ecosystemSites = [
+  {
+    imgFile: 'ecosysteme/flexiweb-evo-data.png',
+    name: 'Catalogue Intelligent',
+    href: 'https://data.flexiweb-evo.eu/',
+  },
+  {
+    imgFile: 'ecosysteme/flexiweb-evo-diag.png',
+    name: 'Diagnostic IA',
+    href: 'https://diag.flexiweb-evo.eu/',
+  },
+  {
+    imgFile: 'ecosysteme/flexiweb-evo-b2b.png',
+    name: 'Site Express',
+    href: 'https://b2b.flexiweb-evo.eu/',
+  },
+]
+
+export const flexiwebEcosystem = {
+  fr: {
+    imgFile: 'ecosysteme/flexiweb-evo-www.png',
+    title: 'Écosystème FlexiWeb EVO',
+    summary:
+      'FlexiWeb EVO, c’est mon activité de développeur indépendant à Toulon : je conçois et j’opère des produits web et IA pour les TPE et PME. Un site principal et des produits sur leurs propres sous-domaines : catalogues interrogeables avec leur source, diagnostic IA, sites vitrines lisibles par l’IA.',
+    href: 'https://www.flexiweb-evo.eu/',
+    tags: ['nextjs', 'tailwind', 'vercel', 'github-actions'],
+    sites: ecosystemSites,
+    siteLabel: 'Ouvrir',
+  },
+  en: {
+    imgFile: 'ecosysteme/flexiweb-evo-www.png',
+    title: 'FlexiWeb EVO ecosystem',
+    summary:
+      'FlexiWeb EVO is my independent developer business in Toulon, France: I design and run web and AI products for small businesses. One main site and products on their own subdomains: catalogs searchable with their source, an AI assessment, showcase websites readable by AI.',
+    href: 'https://www.flexiweb-evo.eu/en',
+    tags: ['nextjs', 'tailwind', 'vercel', 'github-actions'],
+    sites: ecosystemSites,
+    siteLabel: 'Open',
+  },
+}
+
 export const myPortfolioItemsWeb3 = {
   fr: {
     typingText: '| Mes travaux récents',

@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 
+import EcosystemCard from '@/components/ecosystem-card'
 import RealizationsCard from '@/components/realizations-card'
 import TitleText from '@/components/title-text'
 import TypingText from '@/components/typing-text'
@@ -10,12 +11,14 @@ export default function PersonalProjects({
   typingText,
   title,
   personalProjects,
+  ecosystem,
   isDark,
 }: {
   lang?: string
   typingText: string
   title: string
   personalProjects: any[]
+  ecosystem?: React.ComponentProps<typeof EcosystemCard>
   isDark: boolean
 }) {
   return (
@@ -31,6 +34,8 @@ export default function PersonalProjects({
         <TitleText title={<>{title}</>} textStyles="text-center" />
       </motion.div>
       <div className="mt-[50px] flex flex-col gap-[30px]">
+        {/* Écosystème FlexiWeb EVO AVANT boTTyn Social (yg0a1n, 2026-10-12) */}
+        {ecosystem && <EcosystemCard {...ecosystem} />}
         {personalProjects.map((project, index) => (
           <Fragment key={`realizations-${index}`}>
             <RealizationsCard index={index} {...project} isDark={isDark} />
