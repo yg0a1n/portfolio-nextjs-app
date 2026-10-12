@@ -102,8 +102,8 @@ export default function EcosystemSites({
                   tabIndex={isCopy ? -1 : undefined}
                   aria-label={`${siteLabel} ${site.name} — ${new URL(site.href).hostname}`}
                   // Anneau de focus INTÉRIEUR : l'overflow-hidden du carrousel rognait un anneau extérieur
-                  // (gate agent-tools #2417).
-                  className="block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px]"
+                  // Bicolore (trait blanc bordé de noir) : ≥ 3:1 sur n'importe quelle capture (gate #2417, #2419).
+                  className="block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-white focus-visible:shadow-[inset_0_0_0_5px_#0a0a0a]"
                   onFocus={() => {
                     setAnimate(!reduceMotion)
                     setPos(Math.max(0, i - (VISIBLE - 1)))
