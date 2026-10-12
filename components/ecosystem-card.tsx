@@ -41,9 +41,13 @@ export default function EcosystemSites({
   const [animate, setAnimate] = useState(true)
   const [paused, setPaused] = useState(false)
   const [hold, setHold] = useState(false)
+  const [reduceMotion, setReduceMotion] = useState(false)
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) setPaused(true)
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setReduceMotion(true)
+      setPaused(true)
+    }
   }, [])
 
   useEffect(() => {
@@ -97,9 +101,11 @@ export default function EcosystemSites({
                   href={site.href}
                   tabIndex={isCopy ? -1 : undefined}
                   aria-label={`${siteLabel} ${site.name} — ${new URL(site.href).hostname}`}
-                  className="block rounded-2xl"
+                  // Anneau de focus INTÉRIEUR : l'overflow-hidden du carrousel rognait un anneau extérieur
+                  // (gate agent-tools #2417).
+                  className="block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px]"
                   onFocus={() => {
-                    setAnimate(true)
+                    setAnimate(!reduceMotion)
                     setPos(Math.max(0, i - (VISIBLE - 1)))
                   }}
                 >
@@ -118,13 +124,14 @@ export default function EcosystemSites({
         </ul>
       </div>
       <div className="mt-4 flex justify-end">
+        {/* Libellé qui change, sans aria-pressed (sinon « Lecture, enfoncé ») ; glyphes hors du nom accessible. */}
         <button
           type="button"
           onClick={() => setPaused((p) => !p)}
-          aria-pressed={paused}
           className="rounded-full border border-black/20 dark:border-slate-50/30 px-4 py-1 text-[14px]"
         >
-          {paused ? `▶ ${playLabel}` : `❚❚ ${pauseLabel}`}
+          <span aria-hidden="true">{paused ? '▶ ' : '❚❚ '}</span>
+          {paused ? playLabel : pauseLabel}
         </button>
       </div>
     </div>
