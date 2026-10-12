@@ -180,7 +180,7 @@ export const flexiwebEcosystem = {
   fr: {
     imgFile: 'ecosysteme/flexiweb-evo-www.png',
     title: 'Écosystème FlexiWeb EVO',
-    summary:
+    subtitle:
       'FlexiWeb EVO, c’est mon activité de développeur indépendant à Toulon : je conçois et j’opère des produits web et IA pour les TPE et PME. Un site principal et des produits sur leurs propres sous-domaines : catalogues interrogeables avec leur source, diagnostic IA, sites vitrines lisibles par l’IA.',
     href: 'https://www.flexiweb-evo.eu/',
     tags: ['nextjs', 'tailwind', 'vercel', 'github-actions'],
@@ -190,7 +190,7 @@ export const flexiwebEcosystem = {
   en: {
     imgFile: 'ecosysteme/flexiweb-evo-www.png',
     title: 'FlexiWeb EVO ecosystem',
-    summary:
+    subtitle:
       'FlexiWeb EVO is my independent developer business in Toulon, France: I design and run web and AI products for small businesses. One main site and products on their own subdomains: catalogs searchable with their source, an AI assessment, showcase websites readable by AI.',
     href: 'https://www.flexiweb-evo.eu/en',
     tags: ['nextjs', 'tailwind', 'vercel', 'github-actions'],

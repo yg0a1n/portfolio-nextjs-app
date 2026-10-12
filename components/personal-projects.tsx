@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 
-import EcosystemCard from '@/components/ecosystem-card'
+import EcosystemSites from '@/components/ecosystem-card'
 import RealizationsCard from '@/components/realizations-card'
 import TitleText from '@/components/title-text'
 import TypingText from '@/components/typing-text'
@@ -18,7 +18,15 @@ export default function PersonalProjects({
   typingText: string
   title: string
   personalProjects: any[]
-  ecosystem?: React.ComponentProps<typeof EcosystemCard>
+  ecosystem?: {
+    imgFile: string
+    title: string
+    subtitle: string
+    href: string
+    tags: string[]
+    sites: React.ComponentProps<typeof EcosystemSites>['sites']
+    siteLabel: string
+  }
   isDark: boolean
 }) {
   return (
@@ -37,8 +45,22 @@ export default function PersonalProjects({
         <TitleText title={<>{title}</>} textStyles="text-center" />
       </motion.div>
       <div className="mt-[50px] flex flex-col gap-[30px]">
-        {/* Écosystème FlexiWeb EVO AVANT boTTyn Social (yg0a1n, 2026-10-12) */}
-        {ecosystem && <EcosystemCard {...ecosystem} />}
+        {/* Écosystème FlexiWeb EVO AVANT boTTyn Social (yg0a1n, 2026-10-12) : même carte que les autres
+            projets (image, texte, flèche), puis les trois sous-domaines dans l'encadré, comme la démo de boTTyn. */}
+        {ecosystem && (
+          <>
+            <RealizationsCard
+              index={0}
+              imgFile={ecosystem.imgFile}
+              title={ecosystem.title}
+              subtitle={ecosystem.subtitle}
+              href={ecosystem.href}
+              tags={ecosystem.tags}
+              isDark={isDark}
+            />
+            <EcosystemSites sites={ecosystem.sites} siteLabel={ecosystem.siteLabel} />
+          </>
+        )}
         {personalProjects.map((project, index) => (
           <Fragment key={`realizations-${index}`}>
             <RealizationsCard index={index} {...project} isDark={isDark} />
