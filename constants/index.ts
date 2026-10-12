@@ -154,8 +154,9 @@ export const myPortfolioItemsWebsite = {
   ],
 }
 
-// Écosystème FlexiWeb EVO, affiché avant boTTyn Social. Les images sont les og-images des sites
-// (captures du hero au 2026-10-12) : à refaire sous un NOUVEAU nom si un hero change, le cache
+// Écosystème FlexiWeb EVO, affiché avant boTTyn Social. Images = captures du hero de chaque site au
+// 2026-10-12 (pour data, diag et b2b : leurs og-images publiées ; pour www : la même capture que son
+// og-image-v2) : à refaire sous un NOUVEAU nom si un hero change, le cache
 // d'images garderait sinon l'ancienne capture.
 const ecosystemSites = [
   {

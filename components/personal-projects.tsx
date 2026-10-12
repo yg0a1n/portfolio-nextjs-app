@@ -26,7 +26,10 @@ export default function PersonalProjects({
       variants={staggerContainer(0, 0)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
+      // amount 0.05 et non 0.25 : le conteneur n'apparaissait que si 25 % de SA hauteur tenait à l'écran,
+      // donc jamais quand il dépasse 4 hauteurs d'écran (iPhone 390/414 avec l'écosystème, 320/375/640
+      // déjà avant) — gate agent-tools #2403.
+      viewport={{ once: false, amount: 0.05 }}
       className="2xl:max-w-[1280px] w-full mx-auto flex flex-col"
     >
       <TypingText title={typingText} textStyles="text-center" />
