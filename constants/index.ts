@@ -365,11 +365,11 @@ export const web3ProCards = {
 export const newFeaturesContent = {
   fr: {
     typingText: '| Mon rôle actuel',
-    title: `Qu'en est-il de mon travail actuel ?`,
+    title: 'Ce que je fais aujourd’hui',
   },
   en: {
     typingText: '| My current role',
-    title: 'What about my current work?',
+    title: 'What I do today',
   },
 }
 
@@ -377,18 +377,18 @@ export const newFeatures = {
   fr: [
     {
       imgFile: 'flexiweb-evo-logo-192.png',
-      title: 'Développeur Produits SaaS & IA',
+      title: 'Fondateur de FlexiWeb EVO · Développeur produits web & IA',
       subtitle:
-        'Avec FlexiWeb EVO, mon auto-entreprise, je conçois des produits SaaS et des solutions IA pour les TPE/PME, de l’idée au déploiement.',
+        'Je conçois, développe et mets en ligne seul les produits de l’écosystème, pour les TPE et PME. L’IA exécute, je vérifie et je valide chaque livraison.',
       href: 'https://www.flexiweb-evo.eu/',
     },
   ],
   en: [
     {
       imgFile: 'flexiweb-evo-logo-192.png',
-      title: 'SaaS & AI Products Developer',
+      title: 'Founder of FlexiWeb EVO · Web & AI products developer',
       subtitle:
-        'With FlexiWeb EVO, my own business, I build SaaS products and AI solutions for small businesses, from idea to deployment.',
+        'I design, build and ship the ecosystem’s products on my own, for small businesses. AI does the work, I check and approve every release.',
       href: 'https://www.flexiweb-evo.eu/',
     },
   ],
@@ -399,10 +399,10 @@ export const newFeatureCards = {
     {
       name: '',
       description: '',
-      imgFile: 'flexiweb-evo-og.png',
+      imgFile: 'flexiweb-evo-about.png',
       logo_link: '',
       logo_img: '',
-      source_img_link: 'https://www.flexiweb-evo.eu/',
+      source_img_link: 'https://www.flexiweb-evo.eu/about',
       collection: 'news',
     },
   ],
@@ -410,10 +410,10 @@ export const newFeatureCards = {
     {
       name: '',
       description: '',
-      imgFile: 'flexiweb-evo-og.png',
+      imgFile: 'flexiweb-evo-about.png',
       logo_link: '',
       logo_img: '',
-      source_img_link: 'https://www.flexiweb-evo.eu/en',
+      source_img_link: 'https://www.flexiweb-evo.eu/en/about',
       collection: 'news',
     },
   ],
