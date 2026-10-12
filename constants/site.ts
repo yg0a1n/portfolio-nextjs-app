@@ -43,7 +43,7 @@ export const siteMeta = {
     description:
       "Développeur Full Stack, je conçois avec FlexiWeb EVO des produits SaaS et des solutions IA pour les TPE/PME, de l'idée au déploiement. Projets et parcours.",
     heading: 'Yannick Goalen — développeur Full Stack, produits SaaS & IA',
-    jobTitle: 'Développeur Produits SaaS & IA',
+    jobTitle: 'Fondateur de FlexiWeb EVO · Développeur produits web & IA',
     projectsHeading: 'Projets de Yannick Goalen',
     knowsAbout: [
       'Développement Full Stack',
@@ -61,7 +61,7 @@ export const siteMeta = {
     description:
       'Full-Stack developer, I build SaaS products and AI solutions for small businesses with FlexiWeb EVO, from idea to deployment. Selected projects and journey.',
     heading: 'Yannick Goalen — Full-Stack developer, SaaS & AI products',
-    jobTitle: 'SaaS & AI Products Developer',
+    jobTitle: 'Founder of FlexiWeb EVO · Web & AI products developer',
     projectsHeading: 'Projects by Yannick Goalen',
     knowsAbout: [
       'Full-Stack development',
