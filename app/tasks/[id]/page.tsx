@@ -1,7 +1,14 @@
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
+import type { Metadata } from 'next'
 
 import { tasksCards } from '@/constants'
+
+// Page de secours d'une image ouverte en fenêtre depuis l'accueil : sans texte propre,
+// Google la classait en double de l'accueil. Elle reste accessible, hors de l'index.
+export const metadata: Metadata = {
+  robots: { index: false, follow: true },
+}
 
 export async function generateStaticParams() {
   const tasksCardsTranslated = tasksCards.en || tasksCards.fr
